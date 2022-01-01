@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabledManagers": ["dockerfile", "regex"],
+  "docker": {
+    "pinDigests": true
+  },
+  "regexManagers": [
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ARG RESTIC_VERSION=(?<currentValue>.*?)\n"],
+      "depNameTemplate": "restic/restic",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ARG RCLONE_VERSION=(?<currentValue>.*?)\n"],
+      "depNameTemplate": "rclone/rclone",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["alpine", "restic/restic", "rclone/rclone"],
+      "automerge": true,
+      "automergeType": "branch"
+    }
+  ]
+}
