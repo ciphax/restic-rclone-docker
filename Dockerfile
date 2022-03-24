@@ -1,4 +1,4 @@
-FROM alpine:latest@sha256:6af1b11bbb17f4c311e269db6530e4da2738262af5fd9064ccdf109b765860fb AS extractor
+FROM alpine:latest@sha256:ceeae2849a425ef1a7e591d8288f1a58cdf1f4e8d9da7510e29ea829e61cf512 AS extractor
 
 ARG TARGETOS
 ARG TARGETARCH
@@ -18,7 +18,7 @@ RUN chmod +x restic
 RUN unzip /tmp/rclone.zip -d /tmp
 RUN mv /tmp/rclone-v*/rclone rclone
 
-FROM alpine:latest@sha256:6af1b11bbb17f4c311e269db6530e4da2738262af5fd9064ccdf109b765860fb
+FROM alpine:latest@sha256:ceeae2849a425ef1a7e591d8288f1a58cdf1f4e8d9da7510e29ea829e61cf512
 
 RUN apk add --no-cache ca-certificates fuse openssh-client tzdata
 
