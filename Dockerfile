@@ -2,8 +2,10 @@ FROM alpine:latest@sha256:686d8c9dfa6f3ccfc8230bc3178d23f84eeaf7e457f36f271ab1ac
 
 ARG TARGETOS
 ARG TARGETARCH
+# renovate: datasource=github-releases depName=restic/restic
 ARG RESTIC_VERSION=0.13.1
-ARG RCLONE_VERSION=1.58.1
+# renovate: datasource=github-releases depName=rclone/rclone
+ARG RCLONE_VERSION=1.58.0
 
 RUN apk add --no-cache bzip2 unzip
 
