@@ -5,6 +5,10 @@
   "docker": {
     "pinDigests": true
   },
+  "digest": {
+    "automerge": true,
+    "automergeType": "branch"
+  },
   "regexManagers": [
     {
       "fileMatch": ["(^|/)Dockerfile$"],
@@ -15,11 +19,6 @@
     }
   ],
   "packageRules": [
-    {
-      "matchManagers": ["dockerfile"],
-      "automerge": true,
-      "automergeType": "branch"
-    },
     {
       "matchPackageNames": ["restic/restic", "rclone/rclone"],
       "automerge": true,
