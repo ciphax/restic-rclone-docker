@@ -5,7 +5,7 @@ ARG TARGETARCH
 # renovate: datasource=github-releases depName=restic/restic
 ARG RESTIC_VERSION=0.13.1
 # renovate: datasource=github-releases depName=rclone/rclone
-ARG RCLONE_VERSION=1.58.0
+ARG RCLONE_VERSION=1.58.1
 
 RUN apk add --no-cache bzip2 unzip
 
