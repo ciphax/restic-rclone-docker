@@ -3,7 +3,7 @@ FROM alpine:latest@sha256:0a4eaa0eecf5f8c050e5bba433f58c052be7587ee8af3e8b3910ef
 ARG TARGETOS
 ARG TARGETARCH
 # renovate: datasource=github-releases depName=restic/restic extractVersion=v(?<version>.*)$
-ARG RESTIC_VERSION=0.16.5
+ARG RESTIC_VERSION=0.17.0
 # renovate: datasource=github-releases depName=rclone/rclone extractVersion=v(?<version>.*)$
 ARG RCLONE_VERSION=1.67.0
 
